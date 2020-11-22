@@ -7,6 +7,9 @@ import {
 } from 'react-router-dom';
 import { JournalScreen } from '../components/journal/JournalScreen';
 import { AuthRouter } from './AuthRouter';
+
+import '../styles/styles.scss';
+
 export const AppRouter = () => {
 	return (
 		<div>
