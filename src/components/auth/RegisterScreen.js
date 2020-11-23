@@ -6,6 +6,7 @@ import { useForm } from '../../hooks/useForm';
 
 //actions del dispatch
 import { setError, removeError } from '../../actions/ui';
+import { startRegisterWithEmailPasswordName } from '../../actions/auth';
 
 export const RegisterScreen = () => {
 	const dispatch = useDispatch();
@@ -25,7 +26,9 @@ export const RegisterScreen = () => {
 		e.preventDefault();
 
 		if (isFormValid()) {
-			console.log('ok');
+			dispatch(
+				startRegisterWithEmailPasswordName(email, password, name)
+			);
 		} else {
 			console.log('not ok');
 		}
